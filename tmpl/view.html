@@ -1,0 +1,17 @@
+{{define "head"}}
+  <title>{{.Title}}</title>
+{{end}}
+
+{{define "body"}}
+  <h3>
+    <a href="/view/{{.Title}}">{{.Title}}</a>
+    <small style="font-size: 40%;">[<a href="/edit/{{.Title}}">edit</a>]</small>
+  </h3>
+  <h6>Written by <a href="mailto:zakzajac@amazon.com">Zak Zajac</a> on July 28, 2014.</h6>
+
+  <div class="row">
+    <div class="large-12 columns">
+      {{printf "%s" .Body}}
+    </div>
+  </div>
+{{end}}

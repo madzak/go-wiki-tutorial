@@ -1,0 +1,22 @@
+{{define "head"}}
+  <title>Editing {{.Title}}</title>
+{{end}}
+
+{{define "body"}}
+  <h3>Editing {{.Title}}</h3>
+
+  <form action="/save/{{.Title}}" method="POST">
+    <div class="row">
+      <div class="large-12 columns">
+        <textarea name="body" style="width:100%;height:500px;">
+          {{printf "%s" .Body}}
+        </textarea>
+      </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+      <div class="large-2 large-offset-10 columns">
+        <input type="submit" value="Save" class="button radius small right" />
+      </div>
+    </div>
+  </form>
+{{end}}
